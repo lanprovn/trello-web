@@ -1,12 +1,4 @@
-import Button from '@mui/material/Button'
-import AccessAlarmIcon from '@mui/icons-material/AccessAlarm'
-import ThreeDRotation from '@mui/icons-material/ThreeDRotation'
-import HomeIcon from '@mui/icons-material/Home'
-import { pink } from '@mui/material/colors'
-import Typography from '@mui/material/Typography'
 import { useColorScheme } from '@mui/material/styles'
-import useMediaQuery from '@mui/material/useMediaQuery'
-
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
@@ -61,20 +53,36 @@ function ModeSelect() {
 
 function App() {
   return (
-    <Container disableGutters maxWidth={false} sx={{ height: '100vh', backgroundColor: 'primary.main' }}>
+    <Container disableGutters maxWidth={false} sx={{ height: '100vh' }}>
 
       <Box sx={{
         backgroundColor: 'primary.light',
         width: '100%',
-        height: '48px',
+        height: (theme) => theme.trello.appBarHeight,
         display: 'flex',
         alignItems: 'center'
       }}>
         <ModeSelect />
       </Box>
-      <Box></Box>
-      <Box></Box>
-    </Container>
+      <Box sx={{
+        backgroundColor: 'primary.dark',
+        width: '100%',
+        height: (theme) => theme.trello.boardBarHeight,
+        display: 'flex',
+        alignItems: 'center'
+      }}>
+        Board Bar
+      </Box>
+      <Box sx={{
+        backgroundColor: 'primary.main',
+        width: '100%',
+        height: (theme) => `calc(100vh - ${theme.trello.appBarHeight} - ${theme.trello.boardBarHeight})`,
+        display: 'flex',
+        alignItems: 'center'
+      }}>
+        BoardContent
+      </Box>
+    </Container >
   )
 }
 
