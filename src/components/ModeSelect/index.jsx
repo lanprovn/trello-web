@@ -45,7 +45,7 @@ function ModeSelect() {
         </MenuItem>
       </Select>
     </FormControl>
-  );
+  )
 }
 
 export default ModeSelect
