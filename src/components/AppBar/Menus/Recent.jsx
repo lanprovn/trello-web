@@ -12,7 +12,7 @@ import Check from '@mui/icons-material/Check'
 function Recent() {
   const [anchorEl, setAnchorEl] = React.useState(null)
   const open = Boolean(anchorEl)
-  const handleClick = (event ) => {
+  const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
   }
   const handleClose = () => {
@@ -21,6 +21,7 @@ function Recent() {
   return (
     <Box>
       <Button
+        sx={{ color: 'white' }}
         id="basic-button-recent"
         aria-controls={open ? 'basic-menu-recent' : undefined}
         aria-haspopup="true"
