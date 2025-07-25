@@ -16,7 +16,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 function Workspaces() {
   const [anchorEl, setAnchorEl] = React.useState(null)
   const open = Boolean(anchorEl)
-  const handleClick = (event ) => {
+  const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
   }
   const handleClose = () => {
@@ -25,6 +25,7 @@ function Workspaces() {
   return (
     <Box>
       <Button
+        sx={{ color: 'white' }}
         id="basic-button-workspaces"
         aria-controls={open ? 'basic-menu-workspaces' : undefined}
         aria-haspopup="true"

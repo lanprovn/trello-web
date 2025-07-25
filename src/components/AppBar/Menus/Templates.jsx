@@ -12,7 +12,7 @@ import Check from '@mui/icons-material/Check'
 function Templates() {
   const [anchorEl, setAnchorEl] = React.useState(null)
   const open = Boolean(anchorEl)
-  const handleClick = (event ) => {
+  const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
   }
   const handleClose = () => {
@@ -21,6 +21,7 @@ function Templates() {
   return (
     <Box>
       <Button
+        sx={{ color: 'white' }}
         id="basic-button-templates"
         aria-controls={open ? 'basic-menu-templates' : undefined}
         aria-haspopup="true"
